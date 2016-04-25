@@ -47,6 +47,8 @@ group :development do
   gem 'bootstrap-sass', '~> 3.2.0'
   
   gem 'autoprefixer-rails'
+  
+  gem 'high_voltage', '~> 3.0.0'
 end
 
 
