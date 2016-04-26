@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workspace</title>
+  <title>Promise To Play</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -22,7 +22,7 @@
       <ul class="nav navbar-nav">
         <li class="active"><%= link_to 'home', root_path%></li>
         <li><%= link_to 'About', page_path('about') %></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><%= link_to 'Volunteer', new_volunteer_path %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <!--if user is not logged in show this-->
