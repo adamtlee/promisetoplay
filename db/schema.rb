@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160425210757) do
+ActiveRecord::Schema.define(version: 20160429223337) do
+
+  create_table "rsvps", force: :cascade do |t|
+    t.string   "pfirst"
+    t.string   "plast"
+    t.string   "cfirst"
+    t.string   "clast"
+    t.string   "cage"
+    t.string   "foodallergies"
+    t.string   "accomadations"
+    t.string   "question"
+    t.string   "totalcount"
+    t.boolean  "required"
+    t.text     "additionalinformation"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "email"
+    t.string   "phone"
+  end
 
   create_table "volunteers", force: :cascade do |t|
     t.string   "name"
@@ -20,6 +38,7 @@ ActiveRecord::Schema.define(version: 20160425210757) do
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "question"
   end
 
 end

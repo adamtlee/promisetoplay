@@ -28,7 +28,7 @@ class VolunteersController < ApplicationController
 
     respond_to do |format|
       if @volunteer.save
-        format.html { redirect_to @volunteer, notice: 'Volunteer was successfully created.' }
+        format.html { redirect_to  page_path('submitted'), notice: 'Volunteer was successfully created.' }
         format.json { render :show, status: :created, location: @volunteer }
       else
         format.html { render :new }
@@ -69,6 +69,6 @@ class VolunteersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def volunteer_params
-      params.require(:volunteer).permit(:name, :email, :phone, :description)
+      params.require(:volunteer).permit(:name, :email, :phone, :description, :question)
     end
 end

@@ -1,0 +1,74 @@
+<%= form_for(@rsvp) do |f| %>
+  <% if @rsvp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rsvp.errors.count, "error") %> prohibited this rsvp from being saved:</h2>
+
+      <ul>
+      <% @rsvp.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <br></br>
+  <br></br>
+  
+  <div class = "container">
+    <h1>RSVP HERE</h1>
+    <div class="field">
+      <%= f.label :Parent_first_name%><br>
+      <%= f.text_field :pfirst , class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label :Parent_last_name %><br>
+      <%= f.text_field :plast , class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label :Child_first_name %><br>
+      <%= f.text_field :cfirst , class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label :Child_last_name %><br>
+      <%= f.text_field :clast , class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label :Child_age %><br>
+      <%= f.text_field :cage , class: "form-control" %>
+    </div>
+      <div class="field">
+      <%= f.label :Phone %><br>
+      <%= f.text_field :phone , class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label :Email %><br>
+      <%= f.text_field :email , class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label :Foodallergies %><br>
+      <%= f.text_field :foodallergies , class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label :Accomadations %><br>
+      <%= f.text_field :accomadations , class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label :How_did_you_hear_about_us? %><br>
+      <%= f.text_field :question , class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label :How_many_people_are_you_bringing? %><br>
+      <%= f.text_field :totalcount , class: "form-control"  %>
+    </div>
+    <div class="field">
+      <%= f.label :I_signed_the_attached_waiver_and_will_submit_it_before_the_event%><br>
+      <%= f.check_box :required %>
+    </div>
+    <div class="field">
+      <%= f.label :additionalinformation %><br>
+      <%= f.text_area :additionalinformation , class: "form-control" %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Submit", class: "btn btn-default"%>
+    </div>
+  </div>
+<% end %>

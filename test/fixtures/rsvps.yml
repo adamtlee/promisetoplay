@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pfirst: MyString
+  plast: MyString
+  cfirst: MyString
+  clast: MyString
+  cage: MyString
+  foodallergies: MyString
+  accomadations: MyString
+  question: MyString
+  totalcount: MyString
+  required: false
+  additionalinformation: MyText
+
+two:
+  pfirst: MyString
+  plast: MyString
+  cfirst: MyString
+  clast: MyString
+  cage: MyString
+  foodallergies: MyString
+  accomadations: MyString
+  question: MyString
+  totalcount: MyString
+  required: false
+  additionalinformation: MyText

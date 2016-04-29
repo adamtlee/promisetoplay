@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Rsvps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pfirst</th>
+      <th>Plast</th>
+      <th>Cfirst</th>
+      <th>Clast</th>
+      <th>Cage</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Foodallergies</th>
+      <th>Accomadations</th>
+      <th>Question</th>
+      <th>Totalcount</th>
+      <th>Required</th>
+      <th>Additionalinformation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rsvps.each do |rsvp| %>
+      <tr>
+        <td><%= rsvp.pfirst %></td>
+        <td><%= rsvp.plast %></td>
+        <td><%= rsvp.cfirst %></td>
+        <td><%= rsvp.clast %></td>
+        <td><%= rsvp.cage %></td>
+        <td><%= rsvp.phone %></td>
+        <td><%= rsvp.email %></td>
+        <td><%= rsvp.foodallergies %></td>
+        <td><%= rsvp.accomadations %></td>
+        <td><%= rsvp.question %></td>
+        <td><%= rsvp.totalcount %></td>
+        <td><%= rsvp.required %></td>
+        <td><%= rsvp.additionalinformation %></td>
+        <td><%= link_to 'Show', rsvp %></td>
+        <td><%= link_to 'Edit', edit_rsvp_path(rsvp) %></td>
+        <td><%= link_to 'Destroy', rsvp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rsvp', new_rsvp_path %>
