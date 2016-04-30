@@ -30,8 +30,9 @@
       <ul class="nav navbar-nav navbar-right">
         <!--if user is not logged in show this-->
           <li><%= link_to 'Sign In', new_user_session_path %><i class="fa fa-user-plus"></i></li>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></i></li>
+          </ul>
         <% else %>
+        <ul class="nav navbar-nav navbar-right">
           <li><%= link_to 'Volunteer Submissions', volunteers_path %></li>
           <li><%= link_to 'RSVP Submissions', rsvps_path %></li>
           <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></i></li>
