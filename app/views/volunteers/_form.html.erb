@@ -1,56 +1,20 @@
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<%= form_for(@volunteer) do |f| %>
-  <% if @volunteer.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@volunteer.errors.count, "error") %> prohibited this volunteer from being saved:</h2>
-
-      <ul>
-      <% @volunteer.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= simple_form_for @volunteer do |f| %>
+  <%= f.error_notification %>
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+  
   <div class = "container">
-    <h1>Volunteer Form</h1>
-  </div>
-
-<div class = "container">
-  <div class = "form-group">
-    <div class="field">
-      <%= f.label :name %><br>
-      <%= f.text_field :name, class: "form-control" %>
+    <h1>Volunteer here</h1>
+      <%= f.input :name%>
+      <%= f.input :email%>
+      <%= f.input :phone%>
+      <%= f.input :question,:label => "How did you hear about us?" %>
+      <%= f.input :description, :label => "Additional Information"%>
+    <div class="actions">
+      <%= f.submit "Submit", class: "btn btn-default"%>
+    </div>
     </div>
   </div>
-  <div class = "form-group">
-    <div class="field">
-      <%= f.label :email %><br>
-      <%= f.text_field :email, class: "form-control" %>
-    </div>
-  </div>
-  <div class = "form-group">  
-    <div class="field">
-      <%= f.label :phone %><br>
-      <%= f.text_field :phone, class: "form-control" %>
-    </div>
-  </div>
-   <div class = "form-group">  
-    <div class="field">
-      <%= f.label :Where_did_you_hear_about_us? %><br>
-      <%= f.text_area :question, class: "form-control"%>
-    </div>
-  </div>
-  <div class = "form-group">  
-    <div class="field">
-      <%= f.label :Additional_Information %><br>
-      <%= f.text_area :description, class: "form-control"%>
-    </div>
-  </div>
-  <div class="actions">
-    <%= f.submit "Submit", class: "btn btn-default" %>
-  </div>
-</div>
 <% end %>
