@@ -4,42 +4,42 @@
   <title>Promise To Play</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=500, initial-scale=1">
   <%= csrf_meta_tags %>
 </head>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">I Promise To Play Everyday</a>
-    </div>
-            
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <% if not current_user %>
-        <li class="active"><%= link_to 'home', root_path%></li>
-        <li><%= link_to 'About', page_path('about') %></li>
-        <li><%= link_to 'Vendors', page_path('vendors') %></li>
-        <li><%= link_to 'RSVP', new_rsvp_path %></li>
-        <li><%= link_to 'Volunteer', new_volunteer_path %></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <!--if user is not logged in show this-->
-          <!--<li= link_to 'Sign In', new_user_session_path <i class="fa fa-user-plus"></i></li>-->
-          </ul>
-        <% else %>
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to 'Volunteer Submissions', volunteers_path %></li>
-          <li><%= link_to 'RSVP Submissions', rsvps_path %></li>
-          <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></i></li>
-        <% end %>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">I Promise To Play Everyday</a>
+      </div>
+              
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <% if not current_user %>
+          <li class="active"><%= link_to 'home', root_path%></li>
+          <li><%= link_to 'About', page_path('about') %></li>
+          <li><%= link_to 'Vendors', page_path('vendors') %></li>
+          <li><%= link_to 'RSVP', new_rsvp_path %></li>
+          <li><%= link_to 'Volunteer', new_volunteer_path %></li>
         </ul>
-    </div>
+        <ul class="nav navbar-nav navbar-right">
+          <!--if user is not logged in show this-->
+            <!--<li= link_to 'Sign In', new_user_session_path <i class="fa fa-user-plus"></i></li>-->
+            </ul>
+          <% else %>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to 'Volunteer Submissions', volunteers_path %></li>
+            <li><%= link_to 'RSVP Submissions', rsvps_path %></li>
+            <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></i></li>
+          <% end %>
+          </ul>
+      </div>
   </div>
  </nav>
 <body>

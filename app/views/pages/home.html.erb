@@ -1,6 +1,5 @@
 <style>
      body {
-        background: url("http://derounited.com/wp-content/uploads/2015/04/play-outside.jpg");
         background-size: cover;
         background-position: center;
         }
@@ -11,6 +10,11 @@
         height: 100%;
         font-family: "Lato";
         color: white;
+           background: url("http://derounited.com/wp-content/uploads/2015/04/play-outside.jpg") no-repeat center center fixed; 
+          -webkit-background-size: cover;
+      -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
     }
     
     h1 {
@@ -37,10 +41,14 @@
        background: rgb(200, 54, 54); /* This is for ie8 and below */
        background: rgba(0, 0, 0, 0.7); /*0.7 is the opacity*/
     }
+    
+    a:hover {
+        background-color:transparent;
+    }
     </style>
 <div class="container">
  	<div class="row">
- 		<div class="col-lg-12">
+ 		<div class="col-lg-12 col-md-12 col-sm-12">
  			<div class="content">
 				<div class = "jumbotron">
  					<h1>I Promise To Play Everyday</h1></h1>
@@ -48,7 +56,9 @@
  					<h3>10:00 am - 3:00 pm</h3>
  					<h3>Regency Athletic Complex</h3>
  					<hr>
- 					<button class="btn btn-default btn-lg">Learn More</button>
+ 					<button class="btn btn-default btn-lg"><%= link_to 'RSVP', new_rsvp_path %></button>
+ 					<button class="btn btn-default btn-lg"><%= link_to 'Learn More', page_path('about') %></button>
+ 					<button class="btn btn-default btn-lg"><%= link_to 'Volunteer', new_volunteer_path %></button>
  				</div>
  			</div>
  		</div>
