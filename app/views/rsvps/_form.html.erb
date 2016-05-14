@@ -6,23 +6,24 @@
     h1 {
       text-align:center;
     }
+    a:hover {
+        background-color:transparent;
+    }
   </style>
   
   <div class = "container">
     <h1>RSVP</h1>
-      <%= f.input :pfirst, :label => "parent first name"%>
-      <%= f.input :plast,  :label => "parent last name"%>
-      <%= f.input :cfirst, :label => "child first name"%>
-      <%= f.input :clast,  :label => "child last name"%>
-      <%= f.input :cage,   :label => "child age"%>
-      <%= f.input :phone%>
-      <%= f.input :email%>
-      <%= f.input :foodallergies%>
-      <%= f.input :accomadations%>
-      <%= f.input :question%>
-      <%= f.input :totalcount, :label => "How many people will you bring?"%>
-      <%= f.input :required, label: "I have signed the attatched paperwork"%>
-      <%= f.input :additionalinformation, :label => "Additional Information"%>
+    <strong>Please download the rsvp form here and return it in person to Jessica Olivas or Adam Lee</strong><br>
+    <button class="btn btn-default btn-lg"><%= link_to "Event waiver form", asset_path("promisetoplaywaiver.pdf") %></button><br>
+      <%= f.input :pfirst, :label => "Parent/Guardian:"%>
+      <%= f.input :phone, :label => "phone:"%>
+      <%= f.input :email, :label => "email:"%>
+      <%= f.input :foodallergies, :label => "food allergies:"%>
+      <%= f.input :accomadations, :label => "accomadations:"%>
+      <%= f.input :question, :label => "How did you hear about us?:"%>
+      <%= f.input :totalcount, :label => "How many children will you bring?:"%>
+      <%= f.input :required, label: "I have signed the attached paperwork and will/have submit it in person before the event"%>
+      <%= f.input :additionalinformation, :label => "Additional Information:"%>
     </div>
     <div class = "container">
     <div class="actions">
@@ -31,3 +32,10 @@
     </div>
   </div>
 <% end %>
+
+    <% if false %>
+      <%= f.input :plast,  :label => "Last:"%>
+      <%= f.input :cfirst, :label => "child first name"%>
+      <%= f.input :clast,  :label => "child last name"%>
+      <%= f.input :cage,   :label => "child age"%>
+    <% end %>
