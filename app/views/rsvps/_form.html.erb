@@ -13,8 +13,8 @@
   
   <div class = "container">
     <h1>RSVP</h1>
-    <strong>Please download the rsvp form here and return it in person to Jessica Olivas or Adam Lee</strong><br>
-    <button class="btn btn-default btn-lg"><%= link_to "Event waiver form", asset_path("promisetoplaywaiver.pdf") %></button><br>
+    <strong>Please download the event waiver form here and submit it to your child(s) school or in person at the event:</strong>
+    <button class="btn btn-default btn-sm"><%= link_to "Event waiver form", asset_path("promisetoplaywaiver.pdf") %></button><br>
       <%= f.input :pfirst, :label => "Parent/Guardian:"%>
       <%= f.input :phone, :label => "phone:"%>
       <%= f.input :email, :label => "email:"%>
@@ -22,7 +22,8 @@
       <%= f.input :accomadations, :label => "accomadations:"%>
       <%= f.input :question, :label => "How did you hear about us?:"%>
       <%= f.input :totalcount, :label => "How many children will you bring?:"%>
-      <%= f.input :required, label: "I have signed the attached paperwork and will/have submit it in person before the event"%>
+      <%= f.input :required, label: "I will submit the waiver to my child's school or in person at the event"%>
+       <button class="btn btn-default btn-sm"><%= link_to "Event waiver form", asset_path("promisetoplaywaiver.pdf") %></button><br>
       <%= f.input :additionalinformation, :label => "Additional Information:"%>
     </div>
     <div class = "container">
