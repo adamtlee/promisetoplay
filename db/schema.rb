@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160430025423) do
+ActiveRecord::Schema.define(version: 20160515233032) do
 
   create_table "rsvps", force: :cascade do |t|
     t.string   "pfirst"
@@ -57,6 +57,8 @@ ActiveRecord::Schema.define(version: 20160430025423) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "question"
+    t.string   "tshirt_size"
+    t.string   "preference"
   end
 
 end

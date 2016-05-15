@@ -4,6 +4,8 @@ class CreateVolunteers < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.string :phone
+      t.string :tshirt_size
+      t.string :preference
       t.text :description
 
       t.timestamps null: false

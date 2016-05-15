@@ -3,4 +3,5 @@ class Volunteer < ActiveRecord::Base
     validates :email, presence: true
     validates :phone, presence: true
     validates :question, presence: true
+    validates :tshirt_size, presence: true
 end

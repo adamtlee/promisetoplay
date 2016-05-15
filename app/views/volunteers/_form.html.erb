@@ -15,6 +15,8 @@
       <%= f.input :name%>
       <%= f.input :email%>
       <%= f.input :phone%>
+      <%= f.input :preference, collection: [['Nutrition', 'nutrition'],['Activities', 'activities'],['Prizes', 'prizes']], :include_blank => "", :label => "Preference(optional)" %>
+      <%= f.input :tshirt_size, collection: [['Large','large'],['Medium','medium'],['Small','small']], :include_blank => "", :label => "t-shirt size" %>
       <%= f.input :question,:label => "How did you hear about us?" %>
       <%= f.input :description, :label => "Additional Information"%>
     <div class="actions">
