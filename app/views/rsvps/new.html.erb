@@ -4,11 +4,12 @@
 <div class = "container">
     <h1>RSVP</h1>
         <h4><strong>*NOTICE: For best results please make sure you are using Google Chrome*</strong></h4>
-        <h4><strong>*AVISO : Para obtener los mejores resultados por favor asegúrese de que está utilizando Google Chrome*</strong></h4>
+        <h4><strong>En español: *AVISO : Para obtener los mejores resultados por favor asegúrese de que está utilizando Google Chrome*</strong></h4><br>
         <strong>Please download the event waiver form here and submit it to your child(s) school or in person at the event:</strong>
-        <button class="btn btn-default btn-sm"><%= link_to "Event waiver form", asset_path("promisetoplaywaiver.pdf") %></button><br>
-        <strong>Por favor, descargue el formulario de renuncia evento aquí y enviarlo a su hijo ( s ) de la escuela o en persona en el evento:</strong>
-        <button class="btn btn-default btn-sm"><%= link_to "Event waiver form", asset_path("promisetoplaywaiver.pdf") %></button>
+        <button class="btn btn-default btn-sm"><%= link_to "Event waiver form", asset_path("waiver.pdf") %></button><br>
+        <br>
+        <strong>En español: Por favor, descargue el formulario de renuncia evento aquí y enviarlo a su hijo(s) de la escuela o en persona en el evento:</strong>
+        <button class="btn btn-default btn-sm"><%= link_to "Event waiver form(En español)", asset_path("waiver(spanish).pdf") %></button>
 </div>
 <%= render 'form' %>
 <hr>

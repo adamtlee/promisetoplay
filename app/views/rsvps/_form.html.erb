@@ -18,7 +18,6 @@
       <%= f.input :totalcount, :label => "How many children will you bring? | ¿Cuántos niños va a llevar?:"%>
       <%= f.input :required, label: "I will submit the waiver to my child's school or in person at the event | 
         Voy a presentar la renuncia a la escuela de mi hijo o en persona en el evento"%>
-       <button class="btn btn-default btn-sm"><%= link_to "Event waiver form", asset_path("promisetoplaywaiver.pdf") %></button><br>
       <%= f.input :additionalinformation, :label => "Additional Information | Información Adicional:"%>
     </div>
     <div class = "container">
@@ -30,6 +29,8 @@
 <% end %>
 
     <% if false %>
+    <button class="btn btn-default btn-sm"><%= link_to "Event waiver form", asset_path("waiver.pdf") %></button><br>
+       <button class="btn btn-default btn-sm"><%= link_to "Event waiver form(En español)", asset_path("waiver(spanish).pdf") %></button>
       <%= f.input :plast,  :label => "Last:"%>
       <%= f.input :cfirst, :label => "child first name"%>
       <%= f.input :clast,  :label => "child last name"%>

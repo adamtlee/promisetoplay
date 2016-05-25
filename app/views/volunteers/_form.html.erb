@@ -1,22 +1,16 @@
 <%= simple_form_for @volunteer do |f| %>
   <%= f.error_notification %>
-  <br></br>
-  <br></br>
     <style>
     h1 {
       text-align:center;
     }
   </style>
-  
   <div class = "container">
-    <h1>Volunteer</h1>
-    <h4><strong>*NOTICE: For best results please make sure you are using Google Chrome*</strong></h4><br>
-    <h4><strong>*AVISO : Para obtener los mejores resultados por favor asegúrese de que está utilizando Google Chrome*</strong></h4>
       <%= f.input :name, :label => "Name | Nombre:"%>
       <%= f.input :email, :label => "Email:" %>
-      <%= f.input :phone%>
+      <%= f.input :phone, :label => "Phone:" %>
       <%= f.input :preference, collection: [['Nutrition', 'nutrition'],['Activities', 'activities'],['Prizes', 'prizes']], :include_blank => "", :label => "Preference(Optional) | Preferencia(Opcional):" %>
-      <%= f.input :tshirt_size, collection: [['XL', 'xl'],['Large','large'],['Medium','medium'],['Small','small']], :include_blank => "", :label => "T-shirt size | Talla de camiseta" %>
+      <%= f.input :tshirt_size, collection: [['XL', 'xl'],['Large','large'],['Medium','medium'],['Small','small']], :include_blank => "", :label => "T-shirt size | Talla de camiseta:" %>
       <%= f.input :question,:label => "How did you hear about us? | ¿Como supiste de nosotros?:" %>
       <%= f.input :description, :label => "Additional Information | Información Adicional:"%>
     <div class="actions">
