@@ -1,5 +1,4 @@
 <%= simple_form_for @rsvp do |f| %>
-  <%= f.error_notification %>
   <style>
     h1 {
       text-align:center;
@@ -9,6 +8,7 @@
     }
   </style>
   <div class = "container">
+    <%= f.error_notification %>
       <%= f.input :pfirst, :label => "Parent/Guardian | Padre/Guardián:"%>
       <%= f.input :phone, :label => "Phone | Teléfono:"%>
       <%= f.input :email, :label => "Email:"%>
