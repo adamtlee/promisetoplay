@@ -49,7 +49,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <% if not current_user %>
-          <li><%= link_to 'home', root_path%></li>
+          <li><%= link_to 'Home', root_path%></li>
           <li><%= link_to 'About', page_path('about') %></li>
           <li><%= link_to 'Vendors', page_path('vendors') %></li>
           <li><%= link_to 'RSVP', new_rsvp_path %></li>
@@ -98,7 +98,9 @@
                             <a href="#contact">Contact</a>
                         </li>
                     </ul>-->
-                    <p class="copyright text-muted small">Developed & Designed by Adam T Lee</p>
+                    <div class = "container">
+                        <p class="copyright text-muted small">Developed & Designed by Adam T Lee <br>Cell: (720)4801169 <br> Email: adam.lee346@gmail.com</p>
+                    </div>
                 </div>
             </div>
         </div>
