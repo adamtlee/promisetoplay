@@ -12,7 +12,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-     <title>Promise To Play</title>
+    <title>
+        Promise To Play
+    </title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -43,32 +45,38 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" href="https://promisetoplay.com/">I Promise To Play Every Day</a>
+            <a class="navbar-brand topnav" href="https://promisetoplay.com/">I Promise To Play Every Day</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <% if not current_user %>
-          <li><%= link_to 'Home', root_path%></li>
-          <li><%= link_to 'About', page_path('about') %></li>
-          <li><%= link_to 'Vendors', page_path('vendors') %></li>
-          <li><%= link_to 'RSVP', new_rsvp_path %></li>
-          <li><%= link_to 'Volunteer', new_volunteer_path %></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <!--if user is not logged in show this-->
-            <!--<li= link_to 'Sign In', new_user_session_path <i class="fa fa-user-plus"></i></li>-->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <% if not current_user %>
+                  <li><%= link_to 'Home', root_path%></li>
+                  <li><%= link_to 'About', page_path('about') %></li>
+                  <li><%= link_to 'Vendors', page_path('vendors') %></li>
+                  <li><%= link_to 'RSVP', new_rsvp_path %></li>
+                  <li><%= link_to 'Volunteer', new_volunteer_path %></li>
             </ul>
-          <% else %>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to 'Volunteer Submissions', volunteers_path %></li>
-            <li><%= link_to 'RSVP Submissions', rsvps_path %></li>
-            <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></i></li>
-          <% end %>
+            <ul class="nav navbar-nav navbar-right">
+              <!--if user is not logged in show this-->
+              <!--<li= link_to 'Sign In', new_user_session_path <i class="fa fa-user-plus"></i></li>-->
+            </ul>
+                <% else %>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <%= link_to 'Volunteer Submissions', volunteers_path %>
+                    </li>
+                    <li>
+                        <%= link_to 'RSVP Submissions', rsvps_path %>
+                    </li>
+                    <li>
+                        <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></i>
+                    </li>
+                <% end %>
                 </ul>
-            </div>
-            <!-- /.navbar-collapse -->
         </div>
+            <!-- /.navbar-collapse -->
+    </div>
         <!-- /.container -->
     </nav>
 <body>

@@ -5,14 +5,21 @@
 <div class = "container">
     <h1>RSVP</h1>
     <hr>
-            <h5><strong>*NOTICE: For best results please make sure you are using Google Chrome*</strong></h5>
-        <h5><strong>En español: *AVISO : Para obtener los mejores resultados por favor asegúrese de que está utilizando Google Chrome*</strong></h5>
+      <!-- <h5><strong>*NOTICE: For best results please make sure you are using Google Chrome*</strong></h5>
+    <h5><strong>En español: *AVISO : Para obtener los mejores resultados por favor asegúrese de que está utilizando Google Chrome*</strong></h5> -->
+        <h5 style = "text-align: center">
+            <strong>
+                We would like to see you at this event! please download the waiver and turn it in to the volunteers at the check-in table at the event.
+                Also, please fill out the following fields below to provide us with statistics, and a general idea of how many children we will expect to see
+                (which will assist us in our quantity of snacks we should expect to provide). For more information please view our contact information below!
+            </strong>
+        </h5>
     <hr>    
         <strong>Please download the event waiver form here and submit it to the volunteers at the check-in table at the event:</strong>
-        <button class="btn btn-default btn-sm"><%= link_to "Event waiver form", asset_path("waiver.pdf") %></button><br>
+        <a href="/waiver.pdf" class="btn btn-default btn-sm">Event Waiver Form</a><br>
         <br>
         <strong>En español:Por favor, descargue el formulario de renuncia evento aquí y enviarlo a los voluntarios en la mesa de registro de entrada en el evento:</strong>
-        <button class="btn btn-default btn-sm"><%= link_to "Event waiver form(En español)", asset_path("waiver(spanish).pdf") %></button>
+       <a href="/waiver(spanish).pdf" class="btn btn-default btn-sm">Event Waiver Form (En español)</a><hr>
 </div><br>
 <%= render 'form' %>
 <div class = "container">
