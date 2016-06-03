@@ -14,9 +14,13 @@
       <%= f.input :question,:label => "How did you hear about us? | ¿Como supiste de nosotros?:" %>
       <%= f.input :description, :label => "Additional Information | Información Adicional:"%>
     <div class="actions">
-      <%= f.submit "Submit", class: "btn btn-default"%>
+      <a class="btn btn-default" href="/pages/volunteers_lock">Submit</a>
        <br></br>
     </div>
     </div>
   </div>
+<% end %>
+
+<% if false %>
+  <%= f.submit "Submit", class: "btn btn-default"%>
 <% end %>
